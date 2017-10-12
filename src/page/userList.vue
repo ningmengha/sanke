@@ -7,7 +7,7 @@
             </div>
             <div class="searched">
                 <div class="searched_left">
-                    <el-select v-model="myvalue1" filterable placeholder="请选择" @change="test1">
+                    <el-select v-model="myvalue1" filterable placeholder="请选择" @change="test">
                         <el-option v-for="item in options1" :key="item.value" :label="item.label" :value="item.value">
                         </el-option>
                     </el-select>
