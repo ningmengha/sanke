@@ -2,8 +2,8 @@
     <div class="fillcontain">
         <head-top></head-top>
         <div class="table_container">
+            <el-button class="backbtn">返回</el-button>
             <el-tabs type="border-card">
-                <el-button class="backbtn">返回</el-button>
                 <el-tab-pane>
                     <span slot="label">会员资料</span>
                     <template>
