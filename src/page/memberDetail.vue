@@ -2,8 +2,8 @@
     <div class="fillcontain">
         <head-top></head-top>
         <div class="table_container">
-            <el-button class="backbtn">返回</el-button>
             <el-tabs type="border-card">
+                <el-button class="backbtn">返回</el-button>
                 <el-tab-pane>
                     <span slot="label">会员资料</span>
                     <template>
@@ -532,7 +532,9 @@ export default {
 .table_container {
    /* border: 1px solid red; */
 
-
+    .el-tabs__content {
+       position: static;
+     }
     .el-tabs__item.is-active {
         color: #e51c23;
     }
