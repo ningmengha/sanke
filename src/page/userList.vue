@@ -7,7 +7,7 @@
             </div>
             <div class="searched">
                 <div class="searched_left">
-                    <el-select v-model="myvalue1" filterable placeholder="请选择" @change="test">
+                    <el-select v-model="myvalue1" filterable placeholder="请选择" @change="test1">
                         <el-option v-for="item in options1" :key="item.value" :label="item.label" :value="item.value">
                         </el-option>
                     </el-select>
@@ -492,7 +492,7 @@ export default {
                 limit: 20,
                 count: 0,
                 currentPage: 1,
-                userList:[],
+                userList: [],
             }
         },
         components: {
@@ -517,52 +517,48 @@ export default {
         // })
 
         created() {
-            this.initData();
+            // this.initData();
+            this.userList = this.tableData;
         },
         methods: {
-            test(myvalue1) {
-                console.log(myvalue1);
-                if (this.myvalue1 !== '') {
-                    this.userList = this.tableData.filter(item => {
-                        return item.levelname !== null && item.levelname == this.myvalue1
-                    });
+            test1(myvalue1) {
+                // console.log(myvalue1);
+                if (this.myvalue1 == '' || this.myvalue1 == "所有等级") {
+                    this.userList = this.tableData;
                 } else {
-                    // this.tableData = [];
+                    this.userList = this.tableData.filter(item => {
+                        return item.levelname !== null && item.levelname == this.myvalue1;
+                    });
                 }
             },
             test2(input2) {
                 this.$http.get("http://localhost:9090/db").then(response => {
-                        console.log(response.data);
-                        // success callback
-                    }, response => {
-                        // error callback
-                    })
-                    
-                let tablearray2 = [];
+                    console.log(response.data);
+                }, response => {})
+
+                let tablearray = [];
                 if (this.input2 !== '') {
-                    tablearray2 = this.tableData.filter(item => {
+                    tablearray = this.tableData.filter(item => {
                         return item.levelname !== null && item.levelname == this.input2
                     });
-                    console.log(tablearray2);
+                    console.log(tablearray);
 
-                } else {
-                    // this.tableData = [];
-                }
+                } else {}
             },
-            async initData() {
-                try {
-                    const countData = await getUserCount();
-                    if (countData.status == 1) {
-                        this.count = countData.count;
-                    } else {
-                        throw new Error('获取数据失败');
-                    }
-                    this.getUsers();
-                    this.userList = this.tableData;
-                } catch (err) {
-                    console.log('获取数据失败', err);
-                }
-            },
+            // async initData() {
+            //     try {
+            //         const countData = await getUserCount();
+            //         if (countData.status == 1) {
+            //             this.count = countData.count;
+            //         } else {
+            //             throw new Error('获取数据失败');
+            //         }
+            //         this.getUsers();
+
+            //     } catch (err) {
+            //         console.log('获取数据失败', err);
+            //     }
+            // },
             handleSizeChange(val) {
                 console.log(`每页 ${val} 条`);
             },
