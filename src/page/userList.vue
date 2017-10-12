@@ -30,7 +30,7 @@
         </div>
         <!-- 以后需要从后台模拟数据出来 -->
         <div class="table_container">
-            <el-table :data="tableData" highlight-current-row style="width: 100%">
+            <el-table :data="userList" highlight-current-row style="width: 100%">
                 <el-table-column type="index" width="120">
                 </el-table-column>
                 <el-table-column property="levelname" label="等级" width="100" :filters="[{ text: 'VIP', value: 'VIP' }, { text: '批发会员', value: '批发会员' },{ text: '注册会员', value: '注册会员' }]" :filter-method="filterTag">
@@ -492,7 +492,7 @@ export default {
                 limit: 20,
                 count: 0,
                 currentPage: 1,
-
+                userList:[],
             }
         },
         components: {
@@ -520,15 +520,12 @@ export default {
             this.initData();
         },
         methods: {
-            test1(myvalue1) {
+            test(myvalue1) {
                 console.log(myvalue1);
-                let tablearray1 = [];
                 if (this.myvalue1 !== '') {
-                    tablearray1 = this.tableData.filter(item => {
+                    this.userList = this.tableData.filter(item => {
                         return item.levelname !== null && item.levelname == this.myvalue1
                     });
-                    console.log(tablearray1);
-
                 } else {
                     // this.tableData = [];
                 }
@@ -561,6 +558,7 @@ export default {
                         throw new Error('获取数据失败');
                     }
                     this.getUsers();
+                    this.userList = this.tableData;
                 } catch (err) {
                     console.log('获取数据失败', err);
                 }
