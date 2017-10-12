@@ -1,296 +1,5 @@
 <template>
     <div class="fillcontain">
-<<<<<<< .mine
-        <head-top></head-top>
-        <div class="table_container">
-            <el-tabs type="border-card">
-                <el-tab-pane>
-                    <span slot="label">会员资料</span>
-                    <template>
-                        <el-form label-position="left" inline class="demo-table-expand tableone">
-                            <div class="el-form-items">
-                                <el-form-item label="会员ID">
-                                    <span>80001737</span>
-                                </el-form-item>
-                                <el-form-item label="采购数量">
-                                    <span>13678954132</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="用户名">
-                                    <span>13678954132</span>
-                                </el-form-item>
-                                <el-form-item label="累计金额">
-                                    <span>13678954132</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="等级">
-                                    <span>批发会员</span>
-                                </el-form-item>
-                                <el-form-item label="真实姓名">
-                                    <span>批发会员</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="积分">
-                                    <span>81168</span>
-                                </el-form-item>
-                                <el-form-item label="性别">
-                                    <span>81168</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="禁用">
-                                    <span>81168</span>
-                                </el-form-item>
-                                <el-form-item label="出生日期">
-                                    <span>81168</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="注册时间">
-                                    <span>81168</span>
-                                </el-form-item>
-                                <el-form-item label="城市">
-                                    <span>81168</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="注册IP">
-                                    <span>81168</span>
-                                </el-form-item>
-                                <el-form-item label="(E-mail)">
-                                    <span>81168</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="最近访问">
-                                    <span>81168</span>
-                                </el-form-item>
-                                <el-form-item label="联系电话">
-                                    <span>81168</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="登录IP">
-                                    <span>81168</span>
-                                </el-form-item>
-                                <el-form-item label="QQ微信">
-                                    <span>81168</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="积分">
-                                    <span>81168</span>
-                                </el-form-item>
-                                <el-form-item label="性别">
-                                    <span>81168</span>
-                                </el-form-item>
-                            </div>
-                        </el-form>
-                        <el-form label-position="left" inline class="demo-table-expand tabletwo">
-                            <div class="el-form-items">
-                                <el-form-item label="交易排名">
-                                    <span>100</span>
-                                </el-form-item>
-                                <el-form-item label="贡献值">
-                                    <span>10000.00</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="平均单量">
-                                    <span>12件</span>
-                                </el-form-item>
-                                <el-form-item label="平均单价">
-                                    <span>26.00</span>
-                                </el-form-item>
-                            </div>
-                            <div class="el-form-items">
-                                <el-form-item label="30天订单数">
-                                    <span>20</span>
-                                </el-form-item>
-                                <el-form-item label="30天交易额">
-                                    <span>6000.00</span>
-                                </el-form-item>
-                            </div>
-                        </el-form>
-                        <el-form label-position="left" inline class="demo-table-expand tablethree" style="border:1px solid #fff">
-                            <div class="custmer_labers">
-                                <div class="custmer_laber_s"><span>客户标签</span></div>
-                                <div class="custmer_content1">
-                                    <span>女装</span>
-                                    <span>韩版</span>
-                                    <span>好质量</span>
-                                    <span>爽快</span>
-                                    <span>老客户</span>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="custmer_experts">
-                                <div class="custmer_experts_s"><span>客户顾问：许顺</span></div>
-                                <div class="custmer_content2">备注信息</div>
-                            </div>
-                        </el-form>
-                    </template>
-                </el-tab-pane>
-                <el-tab-pane label="余额(100000.00)">
-                    <el-table :data="tableData" highlight-current-row style="width: 100%">
-                        <el-table-column type="index" width="60">
-                        </el-table-column>
-                        <el-table-column label="操作类型" width="100" property="edit_type">
-                        </el-table-column>
-                        <el-table-column label="订单号" width="120" property="pursh_code">
-                        </el-table-column>
-                        <el-table-column label="存入" width="130" property="save_in">
-                        </el-table-column>
-                        <el-table-column label="支出" width="130" property="save_out">
-                        </el-table-column>
-                        <el-table-column label="余额" width="130" property="cost_count">
-                        </el-table-column>
-                        <el-table-column label="交易时间" width="130" property="sell_time">
-                        </el-table-column>
-                        <el-table-column label="操作人" width="100" property="edit_name">
-                        </el-table-column>
-                        <el-table-column label="备注" width="100" property="edit_exp">
-                        </el-table-column>
-                        <el-table-column label="查看" width="120">
-                            <template scope="scope">
-                                <el-button style="border:none;" size="small" @click="handleEdit">[订单]</el-button>
-                            </template>
-                        </el-table-column>
-                    </el-table>
-                </el-tab-pane>
-                <el-tab-pane label="收藏(99)">收藏(99)</el-tab-pane>
-                <el-tab-pane label="关注(99)">关注(99)</el-tab-pane>
-                <el-tab-pane label="足迹(99)">足迹(99)</el-tab-pane>
-                <el-tab-pane label="地址(99)">地址(99)</el-tab-pane>
-            </el-tabs>
-        </div>
-||||||| .r4
-      <div class="table_container">
-        <el-tabs type="border-card">
-          <el-tab-pane>
-            <span slot="label">会员资料</span>
-              <template>
-                <el-form label-position="left" inline class="demo-table-expand tableone">
-                  <div class="el-form-items">
-                    <el-form-item label="会员ID">
-                      <span>80001737</span>
-                    </el-form-item>
-                    <el-form-item label="采购数量">
-                      <span>13678954132</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="用户名">
-                      <span>13678954132</span>
-                    </el-form-item>
-                    <el-form-item label="累计金额">
-                      <span>13678954132</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="等级">
-                      <span>批发会员</span>
-                    </el-form-item>
-                    <el-form-item label="真实姓名">
-                      <span>批发会员</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="积分">
-                      <span>81168</span>
-                    </el-form-item>
-                    <el-form-item label="性别">
-                      <span>81168</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="禁用">
-                      <span>81168</span>
-                    </el-form-item>
-                    <el-form-item label="出生日期">
-                      <span>81168</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="注册时间">
-                      <span>81168</span>
-                    </el-form-item>
-                    <el-form-item label="城市">
-                      <span>81168</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="注册IP">
-                      <span>81168</span>
-                    </el-form-item>
-                    <el-form-item label="(E-mail)">
-                      <span>81168</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="最近访问">
-                      <span>81168</span>
-                    </el-form-item>
-                    <el-form-item label="联系电话">
-                      <span>81168</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="登录IP">
-                      <span>81168</span>
-                    </el-form-item>
-                    <el-form-item label="QQ微信">
-                      <span>81168</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="积分">
-                      <span>81168</span>
-                    </el-form-item>
-                    <el-form-item label="性别">
-                      <span>81168</span>
-                    </el-form-item>
-                  </div>
-                </el-form>
-                <el-form label-position="left" inline class="demo-table-expand tabletwo">
-                  <div class="el-form-items">
-                    <el-form-item label="交易排名">
-                      <span>100</span>
-                    </el-form-item>
-                    <el-form-item label="贡献值">
-                      <span>10000.00</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="平均单量">
-                      <span>12件</span>
-                    </el-form-item>
-                    <el-form-item label="平均单价">
-                      <span>26.00</span>
-                    </el-form-item>
-                  </div>
-                  <div class="el-form-items">
-                    <el-form-item label="30天订单数">
-                      <span>20</span>
-                    </el-form-item>
-                    <el-form-item label="30天交易额">
-                      <span>6000.00</span>
-                    </el-form-item>
-                  </div>
-                </el-form>
-              </template>
-          </el-tab-pane>
-          <el-tab-pane label="余额(100000.00)" disabled>余额(100000.00)</el-tab-pane>
-          <el-tab-pane label="收藏(99)" disabled>收藏(99)</el-tab-pane>
-          <el-tab-pane label="关注(99)" disabled>关注(99)</el-tab-pane>
-          <el-tab-pane label="足迹(99)" disabled>足迹(99)</el-tab-pane>
-          <el-tab-pane label="地址(99)">地址(99)</el-tab-pane>
-        </el-tabs>
-      </div>
-=======
         <head-top></head-top>
         <div class="table_container">
             <el-tabs type="border-card">
@@ -544,7 +253,6 @@
                 </el-tab-pane>
             </el-tabs>
         </div>
->>>>>>> .r9
     </div>
 </template>
 <script>
@@ -563,209 +271,6 @@ export default {
                 edit_name: '管理员',
                 edit_exp: '补运费',
 
-<<<<<<< .mine
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }, {
-                edit_type: '提现',
-                pursh_code: '900023',
-                save_in: '100',
-                save_out: '1200',
-                cost_count: '50',
-                sell_time: '2016-10-10',
-                edit_name: '管理员',
-                edit_exp: '补运费',
-
-            }],
-            currentRow: null,
-            offset: 0,
-            limit: 20,
-            count: 0,
-            currentPage: 1,
-        }
-    },
-    components: {
-        headTop,
-    },
-    created() {
-        this.initData();
-    },
-    methods: {
-        async initData() {
-            try {
-                const countData = await getUserCount();
-                if (countData.status == 1) {
-                    this.count = countData.count;
-                } else {
-                    throw new Error('获取数据失败');
-                }
-                this.getUsers();
-            } catch (err) {
-                console.log('获取数据失败', err);
-||||||| .r4
-<script>
-    import headTop from '../components/headTop'
-    import {getUserList, getUserCount} from '@/api/getData'
-    export default {
-        data(){
-            return {
-                tableData: [{
-                  id: '12987122',
-                  name: '好滋好味鸡蛋仔',
-                  category: '江浙小吃、小吃零食',
-                  desc: '荷兰优质淡奶，奶香浓而不腻',
-                  address: '上海市普陀区真北路',
-                  shop: '王小虎夫妻店',
-                  shopId: '10333'
-                }, {
-                  id: '12987123',
-                  name: '好滋好味鸡蛋仔',
-                  category: '江浙小吃、小吃零食',
-                  desc: '荷兰优质淡奶，奶香浓而不腻',
-                  address: '上海市普陀区真北路',
-                  shop: '王小虎夫妻店',
-                  shopId: '10333'
-                }, {
-                  id: '12987125',
-                  name: '好滋好味鸡蛋仔',
-                  category: '江浙小吃、小吃零食',
-                  desc: '荷兰优质淡奶，奶香浓而不腻',
-                  address: '上海市普陀区真北路',
-                  shop: '王小虎夫妻店',
-                  shopId: '10333'
-                }, {
-                  id: '12987126',
-                  name: '好滋好味鸡蛋仔',
-                  category: '江浙小吃、小吃零食',
-                  desc: '荷兰优质淡奶，奶香浓而不腻',
-                  address: '上海市普陀区真北路',
-                  shop: '王小虎夫妻店',
-                  shopId: '10333'
-                }],
-                currentRow: null,
-                offset: 0,
-                limit: 20,
-                count: 0,
-                currentPage: 1,
-=======
             }, {
                 edit_type: '提现',
                 pursh_code: '900023',
@@ -982,7 +487,6 @@ export default {
                 this.getUsers();
             } catch (err) {
                 console.log('获取数据失败', err);
->>>>>>> .r9
             }
         },
         handleSizeChange(val) {
@@ -993,57 +497,6 @@ export default {
             this.offset = (val - 1) * this.limit;
             this.getUsers()
         },
-<<<<<<< .mine
-        // async getUsers() {
-        //     const Users = await getUserList({ offset: this.offset, limit: this.limit });
-        //     this.tableData = [];
-        //     Users.forEach(item => {
-        //         const tableData = {};
-        //         tableData.username = item.username;
-        //         tableData.registe_time = item.registe_time;
-        //         tableData.city = item.city;
-        //         this.tableData.push(tableData);
-        //     })
-        // },
-        handleEdit() {
-            this.$router.push({
-                path: '/member'
-            });
-||||||| .r4
-        methods: {
-            async initData(){
-                try{
-                    const countData = await getUserCount();
-                    if (countData.status == 1) {
-                        this.count = countData.count;
-                    }else{
-                        throw new Error('获取数据失败');
-                    }
-                    this.getUsers();
-                }catch(err){
-                    console.log('获取数据失败', err);
-                }
-            },
-            handleSizeChange(val) {
-                console.log(`每页 ${val} 条`);
-            },
-            handleCurrentChange(val) {
-                this.currentPage = val;
-                this.offset = (val - 1)*this.limit;
-                this.getUsers()
-            },
-            async getUsers(){
-                const Users = await getUserList({offset: this.offset, limit: this.limit});
-                this.tableData = [];
-                Users.forEach(item => {
-                    const tableData = {};
-                    tableData.username = item.username;
-                    tableData.registe_time = item.registe_time;
-                    tableData.city = item.city;
-                    this.tableData.push(tableData);
-                })
-            }
-=======
         // async getUsers() {
         //     const Users = await getUserList({ offset: this.offset, limit: this.limit });
         //     this.tableData = [];
@@ -1059,34 +512,17 @@ export default {
             this.$router.push({
                 path: '/manage.vue'
             });
->>>>>>> .r9
         },
     },
 }
 
 </script>
-<<<<<<< .mine
-||||||| .r4
-
-=======
 <style lang="less">
 @import '../style/mixin';
 .qf {
     *zoom: 1;
 }
 
->>>>>>> .r9
-<<<<<<< .mine
-<style lang="less">
-@import '../style/mixin';
-.table_container {
-    .el-tabs__item.is-active {
-||||||| .r4
-<style lang="less">
-    @import '../style/mixin';
-    .table_container{
-      .el-tabs__item.is-active {
-=======
 .qf:after {
     content: '';
     display: table;
@@ -1098,7 +534,6 @@ export default {
 
 
     .el-tabs__item.is-active {
->>>>>>> .r9
         color: #e51c23;
     }
     .el-tabs__item {
@@ -1119,48 +554,11 @@ export default {
         border: 1px solid #ececec;
         .el-form-items {
             border-bottom: 1px solid #ececec;
-<<<<<<< .mine
-            &:last-child {
-                border-bottom: 1px solid #ececec;
-            }
-||||||| .r4
-          }
-=======
             &:last-child {
                 border-bottom: none;
             }
->>>>>>> .r9
         }
         .el-form-item {
-<<<<<<< .mine
-            width: 49%;
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            .el-form-item__label {
-                width: 140px;
-                padding-left: 30px;
-                font-size: 16px;
-                color: #666;
-            }
-            .el-form-item__content {
-                color: #666;
-            }
-||||||| .r4
-          width: 49%;
-          padding: 0;
-          margin: 0;
-          box-sizing: border-box;
-          .el-form-item__label {
-            width: 140px;
-            padding-left: 30px;
-            font-size: 16px;
-            color: #666;
-          }
-          .el-form-item__content {
-            color: #666;
-          }
-=======
             width: 49%;
             padding: 0;
             margin: 0;
@@ -1182,7 +580,6 @@ export default {
                     box-sizing: border-box;
                 }
             }
->>>>>>> .r9
         }
     }
     .el-form.tabletwo {
@@ -1194,68 +591,6 @@ export default {
             padding-left: 20px;
         }
     }
-<<<<<<< .mine
-
-    .el-form.tablethree {
-        width: 38%;
-        margin: 15px 10px;
-        float: right;
-    }
-
-    .custmer_labers {
-        padding-left: 5px;
-        font-size: 15px;
-        color: #656a69;
-        height: 148px;
-        border: 1px solid #dedede;
-    }
-
-    .custmer_labers .custmer_laber_s {
-        margin-top: 8px;
-        margin-bottom: 10px;
-    }
-
-    .custmer_labers .custmer_content1 {
-        width: 230px;
-        height: 90px;
-    }
-
-    .custmer_labers .custmer_content1 span {
-        text-align: center;
-        vertical-align: middle;
-        margin: 5px;
-        display: inline-block;
-        width: 60px;
-        height: 30px;
-        line-height: 30px;
-        border: 1px solid red;
-        color: red;
-    }
-
-    .custmer_experts {
-        font-size: 15px;
-        color: #656a69;
-        height: 85px;
-        border: 1px solid #dedede;
-    }
-
-    .custmer_experts .custmer_experts_s {
-        margin-top: 8px;
-        margin-bottom: 10px;
-        margin-left: 10px;
-    }
-
-    .custmer_experts .custmer_content2 {
-        margin-left: 10px;
-        width: 230px;
-        height: 90px;
-    }
-
-   
-}
-
-||||||| .r4
-=======
     .customer {
         width: 38%;
         float: right;
@@ -1443,5 +778,4 @@ export default {
     }
 }
 
->>>>>>> .r9
 </style>
